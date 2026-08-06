@@ -1,1 +1,23 @@
-Fill in information here.
+This Terraform module enforces SC-28, AC-3, CM-6, and AU-3 on a cloud storage bucket and emits the proof as JSON.
+
+These are the controls that are implemented in week 1: 
+
+1. SC-28, protection of information at rest. The primary bucket must encrypt objects by default. The log bucket too. Server-side encryption with AES-256 is enough for this week.
+
+2. AC-3, access enforcement. Public access must be blocked on all four vectors. AWS exposes four separate flags for this, and all four have to be true. Three is not enough. They are four independent doors.
+
+3. CM-6, configuration settings, part one. Versioning on the primary bucket, so prior object states are recoverable and auditable.
+
+4. CM-6, configuration settings, part two.* Four required tags on every taggable resource: Project, Environment, ManagedBy, ComplianceScope. The clean way to do this is the provider `default_tags` block, so you cannot forget them on a new resource.
+
+5. AU-3 and AU-6, audit record content and review. The primary bucket logs access to the dedicated log bucket. The log bucket needs ownership controls set so it can accept a log-delivery ACL before logging will work.
+
+For this to be successful, I had to set up an AWS account that allowed the creation of S3 buckets. Then I installed Terraform and VS Code on my laptop. From there, I utilized the Terraform registry site to find all the fun Terraform settings for AWS. 
+
+From there, the controls are attached to the buckets and executed. 
+
+Once set up, I verified the controls were applied and printed the results in a JSON file. This becomes the evidence before an auditor needs it. 
+
+Eventually, we will automate the continuous monitoring of these controls with alerts to notify the team that something has changed. 
+
+#grcengclub
