@@ -12,7 +12,7 @@ These are the controls that are implemented in week 1:
 
 5. AU-3 and AU-6, audit record content and review. The primary bucket logs access to the dedicated log bucket. The log bucket needs ownership controls set so it can accept a log-delivery ACL before logging will work.
 
-For this to be successful, I had to set up an AWS account that allowed the creation of S3 buckets. Then I installed Terraform and VS Code on my laptop. From there, I utilized the Terraform registry site to find all the fun Terraform settings for AWS. 
+For this to be successful, I had to set up an AWS account that allowed me to create S3 buckets. Then I installed Terraform and VS Code on my laptop. From there, I utilized the Terraform registry site to find all the fun Terraform settings for AWS. 
 
 From there, the controls are attached to the buckets and executed. 
 
@@ -20,4 +20,12 @@ Once set up, I verified the controls were applied and printed the results in a J
 
 Eventually, we will automate the continuous monitoring of these controls with alerts to notify the team that something has changed. 
 
-#grcengclub
+Tools used
+  Terraform
+  AWS CLI
+  Python
+
+Files updated/created
+  main.tf - configuration file
+  outputs.tf - 
+  variables.tf - variables used in the main file 
