@@ -23,7 +23,7 @@ Eventually, we will automate the continuous monitoring of these controls with al
 Tools used
   Terraform
   AWS CLI
-  Python
+  Terraform Registry website
 
 Files updated/created
   main.tf - configuration file
