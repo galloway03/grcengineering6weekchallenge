@@ -1,0 +1,38 @@
+Verifying bucket: challenge1-staging-data-ef4ce290
+
+SC-28 encryption at rest:
+{
+    "ServerSideEncryptionConfiguration": {
+        "Rules": [
+            {
+                "ApplyServerSideEncryptionByDefault": {
+                    "SSEAlgorithm": "AES256"
+                },
+                "BucketKeyEnabled": false,
+                "BlockedEncryptionTypes": {
+                    "EncryptionType": [
+                        "SSE-C"
+                    ]
+                }
+            }
+        ]
+    }
+}
+
+CM-6 versioning:
+{
+    "Status": "Enabled"
+}
+
+AC-3 public access block (all four must be true):
+{
+    "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+    }
+}
+
+If encryption shows AES256, versioning shows Enabled, and all four
+public-access flags are true, the bucket is compliant.
