@@ -25,3 +25,18 @@ output "primary_bucket_versioning_status" {
 	description = "Versioning configuration"
 	value = aws_s3_bucket_versioning.primary.versioning_configuration[0].status
 }
+
+output "primary_bucket_public_access_block { 
+	description = "Access control applied to primary bucket"
+	value = {
+		aws_s3_bucket_public_access_block.primary.block_public_acls 
+  		aws_s3_bucket_public_access_block.primary.block_public_policy
+  		aws_s3_bucket_public_access_block.primary.ignore_public_acls
+  		aws_s3_bucket_public_access_block.primary.restrict_public_buckets
+	}
+}
+
+output "primary_bucket_logging_target" {
+	description = "Target bucket to store access logs from the primary bucket"
+	value = aws_s3_bucket_logging_primary.target_bucket
+}
