@@ -40,4 +40,3 @@ output "primary_bucket_logging_target" {
 	description = "Target bucket to store access logs from the primary bucket"
 	value = aws_s3_bucket_logging.primary.target_bucket
 }
-
