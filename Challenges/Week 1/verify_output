@@ -1,4 +1,4 @@
-Verifying bucket: challenge1-staging-data-ef4ce290
+Verifying bucket: challenge1-staging-data-f6a60d64
 
 SC-28 encryption at rest:
 {
@@ -34,5 +34,38 @@ AC-3 public access block (all four must be true):
     }
 }
 
+AU-3 access logging:
+{
+    "LoggingEnabled": {
+        "TargetBucket": "<name>",
+        "TargetPrefix": "<name>",
+        "TargetObjectKeyFormat": {
+            "PartitionedPrefix": {
+                "PartitionDateSource": "EventTime"
+            }
+        }
+    }
+}
+CM-6 tags:
+{
+    "TagSet": [
+        {
+            "Key": "Project",
+            "Value": "challenge1"
+        },
+        {
+            "Key": "Environment",
+            "Value": "staging"
+        },
+        {
+            "Key": "ManagedBy",
+            "Value": "marigalloway"
+        },
+        {
+            "Key": "ComplianceScope",
+            "Value": "pci"
+        }
+    ]
+}
 If encryption shows AES256, versioning shows Enabled, and all four
-public-access flags are true, the bucket is compliant.
+public-access flags are true, buckets are tagged and logging, the bucket is compliant.
