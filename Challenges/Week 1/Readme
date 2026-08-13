@@ -20,12 +20,13 @@ Once set up, I verified the controls were applied and printed the results in a J
 
 Eventually, we will automate the continuous monitoring of these controls with alerts to notify the team that something has changed. 
 
-Tools used
+<h3>Tools used</h3>
   Terraform
   AWS CLI
   Terraform Registry website
 
-Files updated/created
+<h3>Files updated/created</h3>
   main.tf - configuration file
   outputs.tf - 
-  variables.tf - variables used in the main file 
+  variables.tf - variables used in the main file
+  verify.sh
