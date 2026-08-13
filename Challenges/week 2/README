@@ -2,8 +2,7 @@ This week, we are running the rules and testing that they are working.
 
 There are three Rego deny rules that we need to implement: 
 
-<td>
-<li>SC-28: deny any bucket with no matching encryption configuration.</li>
+SC-28: deny any bucket with no matching encryption configuration.
 
 AC-3: deny any bucket whose public access block is missing or has any of its four flags not set to true.
 
