@@ -1,1 +1,14 @@
+This week, we are running the rules and testing that they are working. 
+
+There are three Rego deny rules that we need to implement: 
+
+SC-28: deny any bucket with no matching encryption configuration.
+
+AC-3: deny any bucket whose public access block is missing or has any of its four flags not set to true.
+
+CM-6: deny any taggable resource missing one of the four required tags.
+
+
+
 Rego details: https://www.openpolicyagent.org/docs/policy-language
+
