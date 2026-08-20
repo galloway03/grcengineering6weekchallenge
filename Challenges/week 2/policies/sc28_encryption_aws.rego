@@ -11,7 +11,7 @@ package compliance.sc28_aws
 
 import rego.v1
 
-deny[msg] if {
+deny contains msg if {
     resource := input.configuration.root_module.resources[_]
     resource.type == "aws_s3_bucket"
 	resource_address := sprintf("%s.%s", [resource.type, resource.name])
