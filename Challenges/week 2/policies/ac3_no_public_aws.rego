@@ -15,7 +15,7 @@ deny[msg] if {
     pab := input.configuration.root_module.resources[_]
     pab.type == "aws_s3_bucket"
 	
-	  pab_address := sprintf("%s.%s", [pab.type, pab.name])
+	pab_address := sprintf("%s.%s", [pab.type, pab.name])
     not has_matching_public_access_block(pab_address)
 
     msg := sprintf("S3 bucket '%s' has no matching public access blocks with all settings enabled. Remediation: Enable public access blocks.", [pab_address])
@@ -33,8 +33,8 @@ has_matching_public_access_block(pab_address) if {
 	# Step 2: find that same access block's resolved values, check all 4 flags
     pab_values := input.planned_values.root_module.resources[_]
     pab_values.address == pab_own_address
-	  pab_values.values.block_public_acls == true
+	pab_values.values.block_public_acls == true
   	pab_values.values.block_public_policy == true
   	pab_values.values.ignore_public_acls == true
-	  pab_values.values.restrict_public_buckets == true
+	pab_values.values.restrict_public_buckets == true
 }
