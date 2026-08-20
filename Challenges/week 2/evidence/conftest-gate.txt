@@ -10,3 +10,14 @@ conftest test --policy policies --namespace compliance.ac3_aws  plan.json
 conftest test --policy policies --namespace compliance.cm6_aws  plan.json
 
 # test failed when one control is missing - SC-28
+FAIL - evidence/plan-broken.json - compliance.sc28_aws - S3 resource 'aws_s3_bucket.log' has no matching server-side encryption configuration. Remediation: Add encryption
+FAIL - evidence/plan-broken.json - compliance.sc28_aws - S3 resource 'aws_s3_bucket.primary' has no matching server-side encryption configuration. Remediation: Add encryption
+
+2 tests, 0 passed, 0 warnings, 2 failures, 0 exceptions
+conftest test --policy policies --namespace compliance.sc28_aws evidence/plan-broken.json
+
+1 test, 1 passed, 0 warnings, 0 failures, 0 exceptions
+conftest test --policy policies --namespace compliance.ac3_aws  evidence/plan-broken.json
+
+1 test, 1 passed, 0 warnings, 0 failures, 0 exceptions
+conftest test --policy policies --namespace compliance.cm6_aws  evidence/plan-broken.json
