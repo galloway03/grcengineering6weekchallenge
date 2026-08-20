@@ -24,4 +24,4 @@ Create three Rego rules that check compliance and provide output as evidence an 
 ### Week 6: Speak the auditor language using OSCAL
 
 Follow the challenge on LinkedIn using the hashtag:
-## grcengineering6weekchallenge
+**#grcengineering6weekchallenge**
