@@ -10,9 +10,9 @@ The following three controls will need rules that execute using Rego <https://ww
 | **AC-3** — Access Enforcement | `ac3_no_public_aws.rego` | the public access block is missing, or any of its four flags is not `true` |
 | **CM-6** — Configuration Settings | `cm6_required_tags_aws.rego` | a *taggable* resource is missing `Project`, `Environment`, `ManagedBy`, or `ComplianceScope` |
 
-<h2> Files used/created </h2>
-evidence/opa test policies.txt - shows all tests passing
-evidence/conftest-gate.txt - used to show the compliant and broken tests
+## Files used/created 
++ evidence/opa test policies.txt - shows all tests passing
++ evidence/conftest-gate.txt - used to show the compliant and broken tests
 evidence/plan-compliant - real plan from week 1
 evidence/plan-broken - broken plan to prove rule catches violations
 policies/*.text.rego - files used to test the rules
