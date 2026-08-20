@@ -14,7 +14,7 @@ import rego.v1
 required := {"Project", "Environment", "ManagedBy", "ComplianceScope"}
 provided_labels(resource) := set() if { not resource.values.labels }
 
-deny[msg] if {
+deny contains msg if {
     bucket := input.planned_values.root_module.resources[_]
     bucket.type == "aws_s3_bucket"
 	
