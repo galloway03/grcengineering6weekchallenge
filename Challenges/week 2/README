@@ -1,4 +1,4 @@
-<h1> Making rules executable <h/1>
+# Making rules executable 
 
 This week, we take 3 rules from week 1 and make sure they execute, pass our checks, and prove compliance rather than just stating it. We are replacing the human with policy as code: code that reads your Terraform plan and returns a verdict on each control, every time, in milliseconds.
 
