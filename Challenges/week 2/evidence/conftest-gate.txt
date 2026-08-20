@@ -1,0 +1,12 @@
+# test pass against compliant JSON file
+
+1 test, 1 passed, 0 warnings, 0 failures, 0 exceptions
+conftest test --policy policies --namespace compliance.sc28_aws plan.json
+  
+1 test, 1 passed, 0 warnings, 0 failures, 0 exceptions
+conftest test --policy policies --namespace compliance.ac3_aws  plan.json
+
+1 test, 1 passed, 0 warnings, 0 failures, 0 exceptions
+conftest test --policy policies --namespace compliance.cm6_aws  plan.json
+
+# test failed when one control is missing - SC-28
