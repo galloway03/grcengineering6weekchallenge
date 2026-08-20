@@ -8,16 +8,16 @@ This challenge helps GRC professionals move from checkbox compliance to engineer
 
 One build a week, six weeks, each one harder than the last. You start with a single compliant cloud resource, and you end with a pipeline that writes its own evidence. Every week produces an artifact that goes straight onto your portfolio, so when you finish you are not just done, you have six new things to show."
 
-### Week 1: Create a compliant resource - AWS s3 buckets
+### [Week 1: Create a compliant resource]( https://github.com/galloway03/grcengineeringclub/tree/main/Challenges/Week%201) - AWS s3 buckets
 Creating a compliant resource using Terraform to enforce:
 + encryption
 + public access blocks
 + version control
 + required tags
 
-### Week 2: Execute Rules from a Terraform plan
+### [Week 2: Execute Rules from a Terraform plan](https://github.com/galloway03/grcengineeringclub/edit/main/Challenges/week%202/README.md)
 Create three Rego rules that check compliance and provide output as evidence an auditor can pull at any time. Shows passing and failing compliance rules with recommendations for remediation. Controls checked: 
-+ SC-28 deny if no encryption enabled at rest
++ SC-28 deny if no encryption is enabled at rest
 + AC-3 deny if all 4 public access rules aren't present and enabled
 + CM-6 deny if at least one required tag is missing
 
