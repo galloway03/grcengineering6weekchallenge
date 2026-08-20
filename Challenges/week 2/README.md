@@ -22,6 +22,6 @@ All three should pass:
 + evidence/opa test policies.txt - shows all tests passing
 + evidence/conftest-gate.txt - used to show the compliant and broken tests
 + evidence/plan-compliant - real plan from week 1
-+ evidence/plan-broken - broken plan to prove rule catches violations
++ evidence/plan-broken - broken plan to prove rule catches violations; remove encryption to test
 + policies/*.text.rego - files used to test the rules
 + policies/*.rego - each policy file with the deny rules listed
