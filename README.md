@@ -4,8 +4,10 @@ GRC Engineering Club Projects
 
 Page under construction. As we go through each challenge, this will update.
 
-<h2>Week 1:</h2>  Create a compliant resource - s3
+<h3>Week 1:</h3>  Create a compliant resource - s3
 
-<h2>Week 2:</h2> 
+<h3>Week 2:</h3>  Execute Rules from week 2
+
+<h3>Week 3:</h3>
 
 ## grcengineering6weekchallenge
