@@ -20,6 +20,7 @@ Eventually, we will automate continuous monitoring of these controls with alerts
 ## Tools used
   + Terraform
   + AWS CLI
+  + VS Code
   + Terraform Registry website
 
 ## Files updated/created
