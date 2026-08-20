@@ -1,4 +1,4 @@
-# Making rules executable
+<h1> Making rules executable <h/1>
 
 This week, we take 3 rules from week 1 and make sure they execute, pass our checks, and prove compliance rather than just stating it. We are replacing the human with policy as code: code that reads your Terraform plan and returns a verdict on each control, every time, in milliseconds.
 
@@ -10,6 +10,10 @@ The following three controls will need rules that execute using Rego <https://ww
 | **AC-3** — Access Enforcement | `ac3_no_public_aws.rego` | the public access block is missing, or any of its four flags is not `true` |
 | **CM-6** — Configuration Settings | `cm6_required_tags_aws.rego` | a *taggable* resource is missing `Project`, `Environment`, `ManagedBy`, or `ComplianceScope` |
 
-## Files used/created
-
-
+<h2> Files used/created </h2>
+evidence/opa test policies.txt - shows all tests passing
+evidence/conftest-gate.txt - used to show the compliant and broken tests
+evidence/plan-compliant - real plan from week 1
+evidence/plan-broken - broken plan to prove rule catches violations
+policies/*.text.rego - files used to test the rules
+policies/*.rego - each policy file with the deny rules listed
