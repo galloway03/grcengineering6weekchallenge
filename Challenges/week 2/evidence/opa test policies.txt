@@ -1,21 +1,18 @@
-BEFORE RULES IMPLEMENTED
-
-opa test policies/ -v
-
-policies/cm6_required_tags_aws_test.rego:24:
-data.compliance.cm6_aws.test_all_tags_present_passes: PASS (3.067916ms)
-
-policies/ac3_no_public_aws_test.rego:35:
-data.compliance.ac3_aws.test_complete_pab_passes: PASS (3.126333ms)
-
-policies/cm6_required_tags_aws_test.rego:28:
-data.compliance.cm6_aws.test_missing_tags_denied: FAIL (3.801084ms)
-
 policies/sc28_encryption_aws_test.rego:24:
-data.compliance.sc28_aws.test_unencrypted_bucket_denied: FAIL (3.0665ms)
+data.compliance.sc28_aws.test_unencrypted_bucket_denied: PASS (4.209917ms)
 
 policies/ac3_no_public_aws_test.rego:39:
-data.compliance.ac3_aws.test_missing_pab_denied: FAIL (3.839041ms)
+data.compliance.ac3_aws.test_missing_pab_denied: PASS (4.185417ms)
 
 policies/sc28_encryption_aws_test.rego:20:
-data.compliance.sc28_aws.test_compliant_bucket_passes: PASS (2.277333ms)
+data.compliance.sc28_aws.test_compliant_bucket_passes: PASS (4.993542ms)
+
+policies/ac3_no_public_aws_test.rego:35:
+data.compliance.ac3_aws.test_complete_pab_passes: PASS (5.154542ms)
+
+policies/cm6_required_tags_aws_test.rego:24:
+data.compliance.cm6_aws.test_all_tags_present_passes: PASS (5.70425ms)
+policies/cm6_required_tags_aws_test.rego:28:
+data.compliance.cm6_aws.test_missing_tags_denied: PASS (5.609833ms)
+--------------------------------------------------------------------------------
+PASS: 6/6
