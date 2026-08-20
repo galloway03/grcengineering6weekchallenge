@@ -4,7 +4,7 @@
 These will be updated as completed. There is overlap with the challenge. 
 
 ## 6-week GRC Challenge with the GRC Engineering Club
-This challenge helps GRC professionals move from checkbox compliance to engineered and continuous monitoring of compliance with actual evidence and not just screenshots. This is code anyone can read, pseudocode, "that takes a piece of cloud infrastructure from it works to it is audit-defensible."
+This challenge helps GRC professionals move from checkbox compliance to engineered and continuous monitoring of compliance with actual evidence and not just screenshots. This is code anyone can read, pseudocode, "that takes a piece of cloud infrastructure from "it works" to "it is audit-defensible."
 
 One build a week, six weeks, each one harder than the last. You start with a single compliant cloud resource, and you end with a pipeline that writes its own evidence. Every week produces an artifact that goes straight onto your portfolio, so when you finish you are not just done, you have six new things to show."
 
