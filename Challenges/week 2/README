@@ -1,14 +1,15 @@
-This week, we are running the rules and testing that they are working. 
+# Making rules executable
 
-There are three Rego deny rules that we need to implement: 
+This week, we take 3 rules from week 1 and make sure they execute, pass our checks, and prove compliance rather than just stating it. We are replacing the human with policy as code: code that reads your Terraform plan and returns a verdict on each control, every time, in milliseconds.
 
-SC-28: deny any bucket with no matching encryption configuration.
+The following three controls will need rules that execute using Rego <https://www.openpolicyagent.org/docs/policy-language>. Each one reads the Terraform plan in JSON and denies a plan that violates the control. 
 
-AC-3: deny any bucket whose public access block is missing or has any of its four flags not set to true.
+| Control | Policy | Denies when |
+|---|---|---|
+| **SC-28** — Protection of Information at Rest | `sc28_encryption_aws.rego` | an `aws_s3_bucket` has no matching server-side encryption configuration |
+| **AC-3** — Access Enforcement | `ac3_no_public_aws.rego` | the public access block is missing, or any of its four flags is not `true` |
+| **CM-6** — Configuration Settings | `cm6_required_tags_aws.rego` | a *taggable* resource is missing `Project`, `Environment`, `ManagedBy`, or `ComplianceScope` |
 
-CM-6: deny any taggable resource missing one of the four required tags.
+## Files used/created
 
-
-
-Rego details: https://www.openpolicyagent.org/docs/policy-language
 
