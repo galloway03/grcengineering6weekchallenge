@@ -11,7 +11,7 @@ package compliance.ac3_aws
 
 import rego.v1
 
-deny[msg] if {
+deny contains msg if {
     pab := input.configuration.root_module.resources[_]
     pab.type == "aws_s3_bucket"
 	
