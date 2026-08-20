@@ -10,6 +10,14 @@ The following three controls will need rules that execute using Rego <https://ww
 | **AC-3** — Access Enforcement | `ac3_no_public_aws.rego` | the public access block is missing, or any of its four flags is not `true` |
 | **CM-6** — Configuration Settings | `cm6_required_tags_aws.rego` | a *taggable* resource is missing `Project`, `Environment`, `ManagedBy`, or `ComplianceScope` |
 
+## Test commands
+opa test . -v
+
+All three should pass: 
++ conftest test --policy policies --namespace compliance.sc28_aws plan.json
++ conftest test --policy policies --namespace compliance.ac3_aws  plan.json
++ conftest test --policy policies --namespace compliance.cm6_aws  plan.json
+
 ## Files used/created 
 + evidence/opa test policies.txt - shows all tests passing
 + evidence/conftest-gate.txt - used to show the compliant and broken tests
