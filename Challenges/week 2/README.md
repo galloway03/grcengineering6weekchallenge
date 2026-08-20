@@ -13,7 +13,7 @@ The following three controls will need rules that execute using Rego <https://ww
 ## Files used/created 
 + evidence/opa test policies.txt - shows all tests passing
 + evidence/conftest-gate.txt - used to show the compliant and broken tests
-evidence/plan-compliant - real plan from week 1
-evidence/plan-broken - broken plan to prove rule catches violations
-policies/*.text.rego - files used to test the rules
-policies/*.rego - each policy file with the deny rules listed
++ evidence/plan-compliant - real plan from week 1
++ evidence/plan-broken - broken plan to prove rule catches violations
++ policies/*.text.rego - files used to test the rules
++ policies/*.rego - each policy file with the deny rules listed
